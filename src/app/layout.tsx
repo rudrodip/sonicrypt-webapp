@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Lato } from "next/font/google";
-import "./globals.css";
+import { Lato } from "next/font/google";
+import localFont from "next/font/local";
+import "@/styles/globals.css";
 
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { siteConfig } from "@/config/site";
@@ -12,8 +13,8 @@ const fontSans = Lato({
   variable: "--font-sans",
 });
 
-const fontHeading = Inter({
-  subsets: ["latin"],
+const fontHeading = localFont({
+  src: "../../assets/fonts/Helvetica-Bold.ttf",
   variable: "--font-heading",
 });
 
