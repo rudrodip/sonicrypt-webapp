@@ -1,0 +1,138 @@
+button {
+  padding: 1rem 2rem;
+  border: 0;
+  background: transparent;
+  position: relative;
+  transform-style: preserve-3d;
+  width: auto;
+}
+button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: calc(var(--intent, 0) * 0.0875);
+  transition: opacity 0.2s;
+}
+
+button:is(:hover, :focus-visible) {
+  --intent: 1;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+button > span:not(.sr-only) {
+  position: relative;
+  color: transparent;
+}
+
+button > span:not(.sr-only)::after {
+  content: attr(data-char);
+  position: absolute;
+  display: inline-block;
+  inset: 0;
+  color: canvasText;
+}
+
+button:is(:hover, :focus-visible) > span:not(.sr-only)::after {
+  animation: flash calc(var(--speed, 0.25) * 1s) calc(var(--index, 0) * 0.05s)
+    steps(1, end);
+}
+
+@keyframes flash {
+  0%,
+  20% {
+    content: "_";
+  }
+  40% {
+    content: var(--char-1);
+  }
+  60% {
+    content: var(--char-2);
+  }
+  80% {
+    content: var(--char-3);
+  }
+}
+
+[data-explode="true"] button:is(:hover, :focus-visible) {
+  --intent: 0;
+}
+
+[data-explode="true"]:has(button:is(:hover, :focus-visible)) .dummy {
+  --intent: 1;
+}
+
+[data-explode="true"] #app {
+  transform: translate3d(0, 0, 100vmin) rotateX(-24deg) rotateY(40deg);
+}
+
+[data-explode="true"] button {
+  scale: 2.4;
+}
+
+button:not(.dummy)::before {
+  content: ".char ::after";
+  position: absolute;
+  left: 100%;
+  white-space: nowrap;
+  translate: 0 -50%;
+  transform-origin: 0 50%;
+  scale: 0.5;
+  top: 50%;
+  text-transform: none;
+  pointer-events: none;
+  opacity: 0;
+}
+
+[data-explode="true"] #app {
+  transition: transform 0.5s 1s;
+}
+
+[data-explode="true"] button {
+  transform: translate3d(0, 0, 50px);
+  transition: transform 0.5s 2s, scale 0.5s 0s;
+}
+
+[data-explode="true"] .dummy {
+  opacity: 1;
+  transform: translate3d(0, 0, -50px);
+  transition: transform 0.5s 2s, scale 0.5s 0s, opacity 0s 0s;
+}
+
+[data-explode="true"] button:not(.dummy)::before {
+  opacity: 1;
+  transition: opacity 1s 3s;
+}
+
+button:not(.dummy)::before {
+  transition: opacity 0.5s 0s;
+}
+
+button {
+  transition: transform 0.5s 1s, scale 0.5s 3s, opacity 0s 3s;
+}
+
+#app {
+  transform: translate3d(0, 0, 100vmin) rotateX(0deg) rotateY(0deg);
+  transition: transform 0.5s 2s;
+}
+
+.dummy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+}
