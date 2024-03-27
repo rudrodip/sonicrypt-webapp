@@ -2,73 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0rem;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 0% 0%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 0% 0%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 2% 25%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 2% 25%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 2% 25%;
-    --accent-foreground: 210 40% 98%;
-
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 2% 25%;
-    --input: 217.2 2% 25%;
-    --ring: 212.7 26.8% 83.9%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
   }
 }
 
 @layer base {
   * {
-    @apply border-border font-mono;
+    @apply font-mono border-border;
+    box-sizing: border-box;
     transform-style: preserve-3d;
   }
   *::before,
@@ -106,6 +91,14 @@
   background: hsl(var(--accent));
 }
 
+.pebble-shadow {
+  box-shadow: inset 2px 0 0 0 rgba(0, 0, 0, 0.05);
+}
+
+.topdown-shadow {
+  box-shadow: 0px 6px 6px 0 rgba(0, 0, 0, 0.17);
+}
+
 /* Tailwind Styles */
 
 .app {
@@ -130,4 +123,49 @@
 
 .desc {
   @apply mt-5 text-lg sm:text-xl max-w-2xl;
+}
+
+/* device */
+.device-body {
+  @apply relative w-full max-w-3xl h-auto mx-auto aspect-[2/1] border rounded-md bg-secondary backdrop-blur-2xl pebble-shadow z-10;
+}
+
+.elements-container {
+  @apply w-full h-full max-w-xl mx-auto flex justify-between items-center;
+}
+
+.notifier-box {
+  @apply relative h-full w-14 border flex flex-col justify-between bg-[#DEDEDE] pebble-shadow;
+}
+
+.notifier-separator {
+  @apply h-[0.125rem] bg-[#ECECEC];
+}
+
+.red-button {
+  @apply bg-[#BAF2BB] absolute w-full h-1 left-0 -bottom-1 rounded-b cursor-pointer;
+}
+
+.module-container {
+  @apply relative h-full w-52 flex justify-center items-center;
+}
+
+.module {
+  @apply border-2 border-[#807F84] rounded-tr-[5rem] w-full aspect-square bg-[#F3F3F3] flex justify-between items-center;
+}
+
+.parent-c {
+  @apply w-14 mx-auto aspect-square flex justify-between items-center bg-gradient-to-b from-[#9D9D9D] to-[#4C4C4C] rounded-full topdown-shadow;
+}
+
+.child-c {
+  @apply w-2 mx-auto aspect-square flex justify-between items-center bg-[#3C3C3C] rounded-full;
+}
+
+.button-container {
+  @apply absolute w-full h-1 left-0 -bottom-1 rounded-b flex justify-end gap-5;
+}
+
+.device-button {
+  @apply w-14 h-full bg-[#807F84] cursor-pointer;
 }
