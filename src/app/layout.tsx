@@ -77,7 +77,7 @@ export const metadata: Metadata = {
       url: siteConfig.ogImage,
       width: 1200,
       height: 630,
-      alt: "Rudrodip Sarker",
+      alt: siteConfig.name,
     },
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
@@ -100,7 +100,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
