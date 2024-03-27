@@ -86,7 +86,7 @@ export const Icons = {
     </svg>
   ),
   logo: ({ ...props }: LucideProps) => (
-    <Image src="/logo.png" alt="favicon" width={30} height={30} />
+    <Image src="/favicon-32x32.png" alt="favicon" width={30} height={30} />
   ),
   twitter: Twitter,
   check: Check,
