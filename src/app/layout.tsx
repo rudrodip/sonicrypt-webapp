@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Lato } from "next/font/google";
-import localFont from "next/font/local";
+import { Lato, Poppins } from "next/font/google";
+import { SolanaWalletProvider } from "@/components/wallet-provider";
 import "@/styles/globals.css";
 
 import { ThemeProvider } from "@/components/theme/theme-provider";
@@ -13,8 +13,9 @@ const fontSans = Lato({
   variable: "--font-sans",
 });
 
-const fontHeading = localFont({
-  src: "../../assets/fonts/Helvetica-Bold.ttf",
+const fontHeading = Poppins({
+  subsets: ["latin"],
+  weight: "400",
   variable: "--font-heading",
 });
 
@@ -104,7 +105,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <SolanaWalletProvider>
+            {children}
+          </SolanaWalletProvider>
         </ThemeProvider>
       </body>
     </html>
