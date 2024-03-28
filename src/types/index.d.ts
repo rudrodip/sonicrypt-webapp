@@ -34,3 +34,66 @@ export type SocialIconProps = {
   link: string;
   pfpLink?: string;
 };
+
+export type SolanaResponseType = {
+  jsonrpc: string;
+  result: [
+    {
+      blockTime: number;
+      confirmationStatus: string;
+      err: null;
+      memo: null;
+      signature: string;
+      slot: number;
+    }
+  ];
+  id: number;
+}
+
+export type TransactionResponseType = {
+  jsonrpc: string;
+  result: {
+    blockTime: number;
+    meta: {
+      computeUnitsConsumed: number;
+      err: null;
+      fee: number;
+      innerInstructions: any[];
+      loadedAddresses: {
+        readonly: any[];
+        writable: any[];
+      };
+      logMessages: string[];
+      postBalances: number[];
+      postTokenBalances: any[];
+      preBalances: number[];
+      preTokenBalances: any[];
+      rewards: any[];
+      status: {
+        Ok: null;
+      };
+    };
+    slot: number;
+    transaction: {
+      message: {
+        accountKeys: string[];
+        header: {
+          numReadonlySignedAccounts: number;
+          numReadonlyUnsignedAccounts: number;
+          numRequiredSignatures: number;
+        };
+        instructions: [
+          {
+            accounts: number[];
+            data: string;
+            programIdIndex: number;
+            stackHeight: null;
+          }
+        ];
+        recentBlockhash: string;
+      };
+      signatures: string[];
+    };
+  };
+  id: number;
+}
