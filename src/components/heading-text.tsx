@@ -15,7 +15,6 @@ const variants = {
 const item = {
   hidden: {
     opacity: 0,
-    x: 100,
     y: 40,
   },
   show: {
@@ -34,7 +33,7 @@ export const HeadingText = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="overflow-hidden"
+      className="overflow-hidden mx-20"
     >
       <motion.h1 variants={item} id="first-line" className="head-text">
         Building <motion.span className="highlighted">sound</motion.span>
