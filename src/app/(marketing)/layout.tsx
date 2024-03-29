@@ -12,21 +12,22 @@ export default function RootLayout({
 }>) {
   return (
     <section className="flex min-h-screen flex-col overflow-x-hidden">
-      <header className="flex justify-between items-center w-full mx-auto border-b bg-background z-[5000]">
-        <div className="flex mx-10">
+      <header className="flex justify-between items-center w-full border-b bg-background z-[5000]">
+        <div className="flex ml-20 items-center">
+        <DefaultGlyphButton
+            text="Sonicrypt"
+            className="text-center flex items-center font-heading lowercase pl-0"
+          />
           <Link href="/about" className={buttonVariants({ variant: "link" })}>
             About
+          </Link>
+          <Link href="/docs" className={buttonVariants({ variant: "link" })}>
+            User Guide
           </Link>
           <Link href="/docs" className={buttonVariants({ variant: "link" })}>
             Docs
           </Link>
         </div>
-        <Link href="/" className="text-xl">
-          <DefaultGlyphButton
-            text="Sonicrypt"
-            className="text-center flex items-center font-heading lowercase"
-          />
-        </Link>
         <div className="flex items-center">
           <WalletButton />
         </div>
