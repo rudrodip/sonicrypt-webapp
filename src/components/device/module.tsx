@@ -156,8 +156,8 @@ export const Module = ({ children }: ModuleProps) => {
       whileInView={{
         backgroundColor: isPlaying ? "#8cdbb3" : "#F3F3F3",
         scale: isPlaying ? 1.4 : 1.3,
+        transition: { duration: 0.3, delay: 0 },
       }}
-      transition={{ duration: 1 }}
       onClick={() => setIsPlaying(!isPlaying)}
     >
       <ReactHowler
