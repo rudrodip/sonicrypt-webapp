@@ -16,7 +16,7 @@ export default function WalletButton() {
   return !publicKey ? (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Connect wallet</Button>
+        <Button variant="outline" size="sm" className="bg-[#54cc56] mr-1">Connect wallet</Button>
       </DialogTrigger>
       <DialogContent>
       <DialogTitle>Connect wallet</DialogTitle>
@@ -48,7 +48,7 @@ export default function WalletButton() {
     </Dialog>
   ) : (
     <div>
-      <Button variant="destructive" className="mr-2" onClick={disconnect}>Disconnect wallet</Button>
+      <Button variant="destructive" size="sm" className="mr-2" onClick={disconnect}>Disconnect wallet</Button>
     </div>
   );
 }
