@@ -1,8 +1,6 @@
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRightIcon } from "lucide-react";
 import { DefaultGlyphButton } from "@/components/glyph-button";
-import { cn } from "@/lib/utils";
 import WalletButton from "@/components/wallet-button";
 
 export default function RootLayout({
@@ -11,10 +9,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <section className="flex min-h-screen flex-col overflow-x-hidden">
-      <header className="flex justify-between items-center w-full border-b bg-background z-[5000]">
-        <div className="flex ml-20 items-center">
-        <DefaultGlyphButton
+    <section className="flex min-h-screen flex-col">
+      <header className="flex justify-between items-center w-full border-b bg-background z-[5000] overflow-hidden">
+        <div className="flex pl-20 items-center">
+          <DefaultGlyphButton
             text="Sonicrypt"
             className="text-center flex items-center font-heading lowercase pl-0"
           />
