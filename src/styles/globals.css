@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -55,6 +54,8 @@
     @apply border-border;
     box-sizing: border-box;
     transform-style: preserve-3d;
+    margin: 0;
+    padding: 0;
   }
   *::before,
   *::after {
@@ -63,21 +64,24 @@
   body {
     @apply bg-background text-foreground;
     height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
   }
 }
 
 *::-webkit-scrollbar {
-  width: 0;
+  width: 0.25rem;
 }
 
 *::-webkit-scrollbar-track {
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   margin-block: 0.5rem;
   border-radius: 100vw;
 }
 
 *::-webkit-scrollbar-thumb {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 25vw;
 }
 
