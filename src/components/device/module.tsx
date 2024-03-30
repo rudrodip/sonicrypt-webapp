@@ -8,16 +8,29 @@ import { getLastTxSignature, getTxDetails } from "@/lib/utils";
 
 type ModuleProps = {
   children: React.ReactNode;
+  triggerPlaying: boolean;
+  listenToTx: boolean;
+  listenToKeyboard: boolean;
 };
 
-export const Module = ({ children }: ModuleProps) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+export const Module = ({
+  children,
+  triggerPlaying,
+  listenToTx,
+  listenToKeyboard,
+}: ModuleProps) => {
+  const [isPlaying, setIsPlaying] = useState(triggerPlaying);
   const audioRef = useRef<ReactHowler>(null);
 
   const { publicKey } = useWallet();
   const walletAddress = publicKey?.toBase58();
 
   useEffect(() => {
+    setIsPlaying(triggerPlaying);
+  }, [triggerPlaying]);
+
+  useEffect(() => {
+    if (!listenToTx) return;
     let finalizedId: number | null = null;
     let confirmedId: number | null = null;
     let ws: WebSocket | null = null;
@@ -112,9 +125,10 @@ export const Module = ({ children }: ModuleProps) => {
         ws.close();
       }
     };
-  }, [walletAddress]);
+  }, [listenToTx, walletAddress]);
 
   useEffect(() => {
+    if (!listenToKeyboard) return;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key.toLowerCase() === "g") {
         if (audioRef.current) {
@@ -129,12 +143,12 @@ export const Module = ({ children }: ModuleProps) => {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isPlaying]);
+  }, [isPlaying, listenToKeyboard]);
 
   return (
     <motion.div
       id="module"
-      className="module z-20"
+      className="border-2 border-[#807F84] w-full aspect-square bg-[#F3F3F3] flex justify-between items-center z-20"
       initial={{
         borderTopRightRadius: "35%",
         borderTopLeftRadius: "0%",
