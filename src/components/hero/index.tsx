@@ -5,9 +5,17 @@ import { HeadingText } from "../heading-text";
 
 export default function Hero() {
   return (
-    <section id="hero" className="w-full min-h-screen flex flex-col gap-6 justify-center">
+    <section
+      id="hero"
+      className="w-full min-h-screen flex flex-col gap-6 justify-center"
+    >
       <HeadingText />
-      <Device />
+      <Device
+        orientation="horizontal"
+        listenToKeyboard={true}
+        listenToTx={true}
+        triggerPlaying={false}
+      />
     </section>
-  )
+  );
 }
