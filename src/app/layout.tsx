@@ -95,7 +95,7 @@ export default function RootLayout({
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable,
-          fontHeading.variable
+          fontHeading.variable,
         )}
         suppressHydrationWarning={true}
       >
@@ -105,9 +105,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SolanaWalletProvider>
-            {children}
-          </SolanaWalletProvider>
+          <SolanaWalletProvider>{children}</SolanaWalletProvider>
         </ThemeProvider>
       </body>
     </html>
