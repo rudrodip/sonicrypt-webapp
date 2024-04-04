@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Lato, Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import { SolanaWalletProvider } from "@/components/wallet-provider";
 import "@/styles/globals.css";
 
@@ -7,17 +7,20 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
-const fontSans = Lato({
-  subsets: ["latin"],
-  weight: "400",
+const fontSans = localFont({
+  src: "../../assets/fonts/TASAOrbiterVF.woff2",
   variable: "--font-sans",
 });
 
-const fontHeading = Poppins({
-  subsets: ["latin"],
-  weight: "400",
+const fontHeading = localFont({
+  src: "../../assets/fonts/CalSans-SemiBold.woff2",
   variable: "--font-heading",
 });
+
+const fontLink = localFont({
+  src: "../../assets/fonts/Bowman.ttf",
+  variable: "--font-link",
+})
 
 export const viewport: Viewport = {
   themeColor: [
@@ -96,6 +99,7 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable,
           fontHeading.variable,
+          fontLink.variable
         )}
         suppressHydrationWarning={true}
       >
