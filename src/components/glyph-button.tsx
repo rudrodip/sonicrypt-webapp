@@ -21,7 +21,7 @@ export function DefaultGlyphButton({
 }: GlyphButtonProps) {
   return (
     <>
-      <button style={{ "--speed": speed ? speed : 0.25 }} className={className}>
+      <button style={{ "--speed": speed ? speed : 0.25 } as React.CSSProperties} className={className}>
         {text.split("").map((char, index) => {
           return (
             <span
@@ -38,7 +38,7 @@ export function DefaultGlyphButton({
                 "--char-3": `"${
                   GLYPHS[Math.floor(Math.random() * GLYPHS.length)]
                 }"`,
-              }}
+              } as React.CSSProperties}
               className={className}
             >
               {char}
