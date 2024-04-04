@@ -33,15 +33,15 @@ export const HeadingText = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="overflow-hidden mx-20"
+      className="overflow-hidden mx-20 head-text"
     >
-      <motion.h1 variants={item} id="first-line" className="head-text">
+      <motion.h1 variants={item} id="first-line">
         Building <motion.span className="highlighted">sound</motion.span>
       </motion.h1>
-      <motion.h1 variants={item} id="second-line" className="head-text">
+      <motion.h1 variants={item} id="second-line">
         & <motion.span className="highlighted">sight</motion.span> to silent
       </motion.h1>
-      <motion.h1 variants={item} id="third-line" className="head-text">
+      <motion.h1 variants={item} id="third-line">
         transactions
       </motion.h1>
     </motion.div>
