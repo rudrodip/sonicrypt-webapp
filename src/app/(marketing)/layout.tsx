@@ -14,7 +14,7 @@ export default function RootLayout({
         <div className="flex pl-20 items-center">
           <DefaultGlyphButton
             text="Sonicrypt"
-            className="text-center flex items-center font-heading lowercase pl-0"
+            className="text-center flex items-center lowercase pl-0"
           />
           <Link href="/about" className={buttonVariants({ variant: "link" })}>
             About
