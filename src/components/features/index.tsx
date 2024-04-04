@@ -7,7 +7,7 @@ export default function Features() {
   return (
     <section id="features">
 			<Feature1 />
-			<Feature2 />
+			{/* <Feature2 /> */}
 		</section>
   );
 }
