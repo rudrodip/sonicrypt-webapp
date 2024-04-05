@@ -32,7 +32,7 @@ export default function RootLayout({
           <WalletButton />
         </div>
       </header>
-      <main className="w-full">
+      <main className="w-full px-2 md:px-0">
         {children}
       </main>
     </section>
