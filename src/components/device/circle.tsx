@@ -27,15 +27,7 @@ export const Circle = () => {
         onEnd={() => setIsPlaying(false)}
       />
       <motion.div
-        className="child-c"
-        animate={{
-          backgroundColor: ["#807F84", "#BAF2BB"],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          repeatType: "mirror",
-        }}
+        className="child-c bg-secondary"
       ></motion.div>
     </motion.div>
   );
