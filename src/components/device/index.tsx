@@ -98,12 +98,14 @@ export default function Device() {
   );
 }
 
-const PlusSVG = ({ className, style }: { className: string, style?: MotionStyle }) => {
+export const PlusSVG = ({ className, style }: { className: string, style?: MotionStyle }) => {
   return (
     <motion.svg
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0, rotate: -90 }}
       animate={{ opacity: 1 }}
+      whileInView={{ rotate: 0 }}
       transition={{ duration: 1 }}
+      viewport={{ once: true }}
       style={style}
       width="26"
       height="26"
