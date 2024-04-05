@@ -8,29 +8,18 @@ import { getLastTxSignature, getTxDetails } from "@/lib/utils";
 
 type ModuleProps = {
   children: React.ReactNode;
-  triggerPlaying: boolean;
-  listenToTx: boolean;
-  listenToKeyboard: boolean;
 };
 
 export const Module = ({
   children,
-  triggerPlaying,
-  listenToTx,
-  listenToKeyboard,
 }: ModuleProps) => {
-  const [isPlaying, setIsPlaying] = useState(triggerPlaying);
+  const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<ReactHowler>(null);
 
   const { publicKey } = useWallet();
   const walletAddress = publicKey?.toBase58();
 
   useEffect(() => {
-    setIsPlaying(triggerPlaying);
-  }, [triggerPlaying]);
-
-  useEffect(() => {
-    if (!listenToTx) return;
     let finalizedId: number | null = null;
     let confirmedId: number | null = null;
     let ws: WebSocket | null = null;
@@ -125,25 +114,7 @@ export const Module = ({
         ws.close();
       }
     };
-  }, [listenToTx, walletAddress]);
-
-  useEffect(() => {
-    if (!listenToKeyboard) return;
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key.toLowerCase() === "g") {
-        if (audioRef.current) {
-          audioRef.current.seek(0);
-        }
-        setIsPlaying(true);
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [isPlaying, listenToKeyboard]);
+  }, [walletAddress]);
 
   return (
     <motion.div
