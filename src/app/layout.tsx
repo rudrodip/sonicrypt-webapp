@@ -6,6 +6,7 @@ import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import BG from "@/components/bg";
 
 const fontSans = localFont({
   src: "../../assets/fonts/TASAOrbiterVF.woff2",
@@ -96,20 +97,23 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased overflow-x-hidden",
           fontSans.variable,
           fontHeading.variable,
           fontLink.variable
         )}
         suppressHydrationWarning={true}
       >
+        <BG />
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <SolanaWalletProvider>{children}</SolanaWalletProvider>
+          <SolanaWalletProvider>
+            {children}
+          </SolanaWalletProvider>
         </ThemeProvider>
       </body>
     </html>
