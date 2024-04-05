@@ -10,7 +10,7 @@ export default function RootLayout({
 }>) {
   return (
     <section className="flex min-h-screen flex-col">
-      <header className="absolute top-0 flex justify-between items-center w-full px-3 sm:px-10 py-1 z-[5000] overflow-hidden">
+      <header className="sticky top-0 flex justify-between items-center w-full px-3 sm:px-10 py-1 z-[5000] bg-secondary/30 backdrop-blur-lg overflow-hidden">
         <div className="flex items-center">
           <DefaultGlyphButton
             text="Sonicrypt"
@@ -28,7 +28,7 @@ export default function RootLayout({
             </Link>
           </div>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-5">
           <WalletButton />
         </div>
       </header>

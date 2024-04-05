@@ -53,21 +53,9 @@
 @layer base {
   * {
     @apply border-border;
-    box-sizing: border-box;
-    transform-style: preserve-3d;
-    margin: 0;
-    padding: 0;
-  }
-  *::before,
-  *::after {
-    transform-style: preserve-3d;
   }
   body {
     @apply bg-background text-foreground;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
   }
 }
 
@@ -75,7 +63,10 @@
   z-index: -1000;
   width: 100vw;
   min-height: 100vh;
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1000;
   display: flex;
   justify-content: center;
   padding-top: 1rem;
