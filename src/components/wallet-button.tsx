@@ -16,10 +16,12 @@ export default function WalletButton() {
   return !publicKey ? (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="default" size="sm" className="font-link border-border" >Connect wallet</Button>
+        <Button variant="default" size="sm" className="font-link border-border">
+          Connect wallet
+        </Button>
       </DialogTrigger>
-      <DialogContent>
-      <DialogTitle>Connect wallet</DialogTitle>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogTitle>Connect wallet</DialogTitle>
         <div className="flex flex-col gap-3 items-start">
           {wallets.filter((wallet) => wallet.readyState === "Installed")
             .length > 0 ? (
@@ -31,12 +33,12 @@ export default function WalletButton() {
                   onClick={() => select(wallet.adapter.name)}
                   className="flex gap-3 w-full"
                 >
-                    <Image 
-                        src={wallet.adapter.icon}
-                        alt={wallet.adapter.name}
-                        width={24}
-                        height={24}
-                    />
+                  <Image
+                    src={wallet.adapter.icon}
+                    alt={wallet.adapter.name}
+                    width={24}
+                    height={24}
+                  />
                   {wallet.adapter.name}
                 </button>
               ))
@@ -48,7 +50,9 @@ export default function WalletButton() {
     </Dialog>
   ) : (
     <div>
-      <Button size="sm" className="font-link leading" onClick={disconnect}>Disconnect wallet</Button>
+      <Button size="sm" className="font-link leading" onClick={disconnect}>
+        Disconnect wallet
+      </Button>
     </div>
   );
 }
