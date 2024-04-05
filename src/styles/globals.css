@@ -71,18 +71,31 @@
   }
 }
 
+.main {
+  z-index: -1000;
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  pointer-events: none;
+  opacity: 0.8;
+  overflow: hidden;
+}
+
 *::-webkit-scrollbar {
   width: 0.25rem;
 }
 
 *::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   margin-block: 0.5rem;
   border-radius: 100vw;
 }
 
 *::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.1);
+  background: hsl(var(--accent));
   border-radius: 25vw;
 }
 
@@ -160,7 +173,7 @@
 }
 
 .head-text {
-  @apply text-4xl font-sans font-extrabold leading-[1.15] md:text-6xl sm:text-7xl;
+  @apply text-6xl font-heading font-extrabold leading-[1.15] md:text-8xl lg:text-9xl;
 }
 
 .head-text-md {
@@ -171,8 +184,20 @@
   @apply bg-gradient-to-b from-primary to-muted-foreground bg-clip-text text-transparent;
 }
 
+.red {
+  @apply bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent;
+}
+
+.gray {
+  @apply bg-gradient-to-b from-slate-400 to-slate-700 bg-clip-text text-transparent;
+}
+
 .desc {
   @apply mt-5 text-lg sm:text-xl max-w-2xl;
+}
+
+.abs-center {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 
 .highlighted {
