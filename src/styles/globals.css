@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -135,7 +136,7 @@
 }
 
 .sweep-hover-animation {
-  @apply text-[#54cc56];
+
 }
 
 .sweep-hover-animation {
@@ -175,36 +176,7 @@
 }
 
 .highlighted {
-  @apply italic underline font-serif sweep-hover-animation;
-}
-
-/* device */
-.device-body {
-  @apply relative w-[768px] mx-auto aspect-[2/1] rounded-md bg-[#ECECEC] backdrop-blur-2xl pebble-shadow z-10;
-}
-
-.elements-container {
-  @apply h-full w-[576px] mx-auto flex justify-between items-center;
-}
-
-.notifier-box {
-  @apply relative h-full w-14 border border-[#ECECEC] flex flex-col justify-between bg-[#DEDEDE] pebble-shadow;
-}
-
-.notifier-separator {
-  @apply h-[0.125rem] bg-[#ECECEC];
-}
-
-.red-button {
-  @apply bg-[#e55a6b] absolute w-full h-1 left-0 -bottom-1 rounded-b cursor-pointer;
-}
-
-.module-container {
-  @apply relative h-full w-52 flex justify-center items-center;
-}
-
-.module {
-  @apply border-2 border-[#807F84] w-full aspect-square bg-[#F3F3F3] flex justify-between items-center;
+  @apply italic underline font-serif;
 }
 
 .parent-c {
@@ -213,12 +185,4 @@
 
 .child-c {
   @apply w-2 mx-auto aspect-square flex justify-between items-center bg-[#3C3C3C] rounded-full;
-}
-
-.button-container {
-  @apply absolute w-full h-1 left-0 -bottom-1 rounded-b flex justify-end gap-5;
-}
-
-.device-button {
-  @apply w-14 h-full bg-[#807F84] cursor-pointer;
 }
