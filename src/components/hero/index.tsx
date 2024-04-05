@@ -10,12 +10,7 @@ export default function Hero() {
       className="w-full min-h-screen flex flex-col gap-6 justify-center"
     >
       <HeadingText />
-      <Device
-        orientation="horizontal"
-        listenToKeyboard={true}
-        listenToTx={true}
-        triggerPlaying={false}
-      />
+      <Device />
     </section>
   );
 }
