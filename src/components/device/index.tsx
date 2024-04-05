@@ -6,21 +6,8 @@ import { notifierConfig } from "./notifier.config";
 import { Circle } from "./circle";
 import { Module } from "./module";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import { cn } from "@/lib/utils";
 
-interface DeviceProps {
-  orientation: "horizontal" | "vertical";
-  listenToKeyboard: boolean;
-  listenToTx: boolean;
-  triggerPlaying: boolean;
-}
-
-export default function Device({
-  orientation,
-  listenToKeyboard,
-  listenToTx,
-  triggerPlaying,
-}: DeviceProps) {
+export default function Device() {
   const maxWidth = useMediaQuery("(max-width: 774px)");
 
   return (
@@ -29,12 +16,10 @@ export default function Device({
       initial={{
         y: 50,
         opacity: 0,
-        rotate: orientation === "vertical" ? -90 : 0,
       }}
       animate={{
         y: 0,
         opacity: 1,
-        rotate: orientation === "vertical" ? -90 : 0,
       }}
       transition={{ duration: 1 }}
       className="relative rounded-md w-[768px] mx-auto aspect-[2/1] bg-[#ECECEC] pebble-shadow z-10"
@@ -44,10 +29,8 @@ export default function Device({
           {notifierConfig.map((notifier, idx) => (
             <Notifier
               key={notifier.id}
-              keyPress={notifier.key}
               backgroundColor={notifier.backgroundColor}
               audioPath={notifier.audioPath}
-              listenToKeyboard={listenToKeyboard}
             />
           ))}
           <motion.div
@@ -56,11 +39,7 @@ export default function Device({
           ></motion.div>
         </motion.div>
         <motion.div className="relative h-full w-52 flex justify-center items-center">
-          <Module
-            triggerPlaying={triggerPlaying}
-            listenToTx={listenToTx}
-            listenToKeyboard={listenToKeyboard}
-          >
+          <Module>
             <Circle />
           </Module>
           <motion.div
