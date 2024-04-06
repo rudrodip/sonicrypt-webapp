@@ -20,20 +20,20 @@ export default function MobileAppSection() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-            className="font-heading text-5xl lg:text-8xl font-semibold tracking-tight mb-20"
+            className="head-text-md lg:mb-20"
           >
             Sonicrypt app
           </motion.h1>
-          <motion.div className="mt-12 flex flex-col justify-center">
+          <motion.div className="mt-6 flex flex-col justify-center">
             {appFeatures.map((feature, index) => (
               <motion.p
                 key={index}
-                className="font-sans tracking-tight font-semibold text-4xl py-3"
+                className="font-sans tracking-tight font-semibold text-2xl lg:text-4xl py-1 md:py-3 ml-6"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{
                   opacity: 1,
                   y: -20,
-                  x: 40,
+                  x: 20,
                   transition: { duration: 0.25, delay: index * 0.125 },
                 }}
               >
@@ -41,22 +41,31 @@ export default function MobileAppSection() {
                 {feature}
               </motion.p>
             ))}
-             <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 20, scale: 1.2, transition: { duration: 0.25 } }}
-            className="ml-6 md:ml-16 lg:ml-32"
-          >
-            <HoverBorderGradient
-              containerClassName="rounded-full"
-              as="button"
-              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{
+                opacity: 1,
+                y: 20,
+                x: 0,
+                scale: 1.2,
+                transition: { duration: 0.25 },
+              }}
+              className="ml-0 md:ml-16 lg:ml-32"
             >
-              Download
-            </HoverBorderGradient>
-          </motion.div>
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+              >
+                Download
+              </HoverBorderGradient>
+            </motion.div>
+            <div className="md:hidden my-12 w-full justify-center items-center">
+              <FloatingPhone />
+            </div>
           </motion.div>
         </div>
-        <div className="h-full flex justify-center items-center">
+        <div className="hidden md:flex h-full justify-center items-center">
           <FloatingPhone />
         </div>
       </div>
@@ -91,7 +100,7 @@ const FloatingPhone = () => {
         transition={{
           duration: 1,
         }}
-        className="relative w-[300px] aspect-[1/2] flex flex-col  border-4 rounded-lg justify-between items-center bg-zinc-900"
+        className="relative w-[300px] aspect-[1/2] flex flex-col border-4 rounded-lg justify-between items-center bg-zinc-900 mx-auto"
       >
         <div
           id="punch-hole-camera"
@@ -102,7 +111,7 @@ const FloatingPhone = () => {
             muted: true,
             sources: [
               {
-                src: "/video/sonicrypt-demo.webm",
+                src: "https://firebasestorage.googleapis.com/v0/b/collabsync-yt.appspot.com/o/sonicrypt-demo.webm?alt=media&token=dc105662-fd7c-44a5-bb76-db9a3ba25693",
                 type: "video/mp4",
               },
             ],
