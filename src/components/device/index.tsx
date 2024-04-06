@@ -9,7 +9,10 @@ import { Module } from "./module";
 
 export default function Device() {
   const scrollRef = useRef<any>(null);
-  const { scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll({
+    target: scrollRef,
+    offset: ["end end", "end start"],
+  });
 
   return (
     <motion.div
