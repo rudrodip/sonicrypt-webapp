@@ -130,7 +130,7 @@ export default function Specs() {
     >
       <motion.div initial={{ y: 5 }} whileInView={{ y: -100 }} className="relative w-full">
         <motion.h1
-          className="abs-center font-sans font-bold text-5xl text-center"
+          className="abs-center head-text-md text-center"
           initial={{
             opacity: 0,
             y: 20,
@@ -144,7 +144,7 @@ export default function Specs() {
           {texts[currentIndex]}
         </motion.h1>
       </motion.div>
-      <div ref={scope} className="relative w-full max-w-2xl mx-auto">
+      <div ref={scope} className="hidden md:block relative w-full max-w-2xl mx-auto">
         <motion.div id="img" className="w-full mx-auto">
           <Image
             src="/image/esp.png"
@@ -264,6 +264,13 @@ export default function Specs() {
           </motion.div>
         </motion.div>
       </div>
+      <Image 
+        src="/image/device.svg"
+        alt="device"
+        width={400}
+        height={800}
+        className="w-1/2 mx-auto md:hidden"
+      />
       <motion.svg
         width="91"
         height={svgHeight}
