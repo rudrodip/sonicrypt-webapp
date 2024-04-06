@@ -35,8 +35,8 @@ export default function Workflow() {
   });
 
   return (
-    <motion.section style={{ scale: (width > 865 ? 1 : width / 1000) }} className="relative">
-      <h1 className="font-heading text-7xl text-center mb-12 md:mt-32 lg:mt-44">Instant feedback</h1>
+    <motion.section style={{ scale: (width > 865 ? 1 : width / 900) }} className="relative">
+      <h1 className="hidden sm:block head-text-md text-center mb-12">Instant feedback</h1>
       <motion.div ref={ref} className="relative w-full h-full flex items-center justify-center gap-32 lg:gap-44">
         <div id="phone-container" className="flex justify-center items-center">
           <PhoneAnimation />
@@ -80,19 +80,19 @@ export default function Workflow() {
             </div>
             <PlusSVG
               className="absolute -top-[13px] -left-[13px]"
-              style={{ scale: 0.6 }}
+              style={{ scale: 0.4 }}
             />
             <PlusSVG
               className="absolute -top-[13px] -right-[13px]"
-              style={{ scale: 0.6 }}
+              style={{ scale: 0.4 }}
             />
             <PlusSVG
               className="absolute -bottom-[13px] -left-[13px]"
-              style={{ scale: 0.6 }}
+              style={{ scale: 0.4 }}
             />
             <PlusSVG
               className="absolute -bottom-[13px] -right-[13px]"
-              style={{ scale: 0.6 }}
+              style={{ scale: 0.4 }}
             />
           </div>
         </div>
