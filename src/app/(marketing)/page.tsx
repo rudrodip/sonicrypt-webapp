@@ -1,6 +1,7 @@
 "use client";
 import Hero from "@/components/hero";
 import VideoPreview from "@/components/video-preview";
+import SolanaGlobe from "@/components/globe";
 import dynamic from "next/dynamic";
 
 const MobileAppSection = dynamic(() => import("@/components/mobile-app"));
@@ -26,6 +27,9 @@ export default function Home() {
       </div>
       <div className="w-full min-h-screen">
         <Products />
+      </div>
+      <div className="w-full min-h-screen">
+        <SolanaGlobe />
       </div>
     </div>
   );
