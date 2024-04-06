@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import BG from "@/components/bg";
+import LenisProvider from "@/components/lenis-provider";
 
 const fontSans = localFont({
   src: "../../assets/fonts/TASAOrbiterVF.woff2",
@@ -21,7 +22,7 @@ const fontHeading = localFont({
 const fontLink = localFont({
   src: "../../assets/fonts/Bowman.ttf",
   variable: "--font-link",
-})
+});
 
 export const viewport: Viewport = {
   themeColor: [
@@ -100,7 +101,7 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased overflow-x-hidden",
           fontSans.variable,
           fontHeading.variable,
-          fontLink.variable
+          fontLink.variable,
         )}
         suppressHydrationWarning={true}
       >
@@ -112,7 +113,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SolanaWalletProvider>
-            {children}
+            <LenisProvider>{children}</LenisProvider>
           </SolanaWalletProvider>
         </ThemeProvider>
       </body>
