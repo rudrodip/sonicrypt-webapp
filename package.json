@@ -42,6 +42,7 @@
     "@react-three/fiber": "^8.16.1",
     "@solana/wallet-adapter-react": "^0.15.35",
     "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@studio-freight/hamo": "^0.6.28",
     "@studio-freight/react-lenis": "^0.0.46",
     "@types/react-howler": "^5.2.3",
     "class-variance-authority": "^0.7.0",
@@ -69,7 +70,8 @@
     "three": "^0.163.0",
     "three-globe": "^2.31.0",
     "vaul": "^0.9.0",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/node": "^20",
