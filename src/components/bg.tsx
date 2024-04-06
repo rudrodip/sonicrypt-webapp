@@ -176,7 +176,7 @@ export default function BG() {
           variants={{
             initial: { opacity: 0 },
             animate: {
-              opacity: 0.12,
+              opacity: 0.5,
               transition: { duration: 1, ease: "easeInOut" },
             },
           }}
@@ -192,7 +192,7 @@ export default function BG() {
           variants={{
             initial: { opacity: 0 },
             animate: {
-              opacity: 0.07,
+              opacity: 0.6,
               transition: { duration: 1, ease: "easeInOut" },
             },
           }}
@@ -208,7 +208,7 @@ export default function BG() {
           variants={{
             initial: { opacity: 0 },
             animate: {
-              opacity: 0.15,
+              opacity: 0.7,
               transition: { duration: 1, ease: "easeInOut" },
             },
           }}
@@ -224,7 +224,7 @@ export default function BG() {
           variants={{
             initial: { opacity: 0 },
             animate: {
-              opacity: 0.13,
+              opacity: 0.5,
               transition: { duration: 1, ease: "easeInOut" },
             },
           }}
@@ -240,7 +240,7 @@ export default function BG() {
           variants={{
             initial: { opacity: 0 },
             animate: {
-              opacity: 0.16,
+              opacity: 0.4,
               transition: { duration: 1, ease: "easeInOut" },
             },
           }}
@@ -256,7 +256,7 @@ export default function BG() {
           variants={{
             initial: { opacity: 0 },
             animate: {
-              opacity: 0.1,
+              opacity: 0.6,
               transition: { duration: 1, ease: "easeInOut" },
             },
           }}
@@ -272,7 +272,7 @@ export default function BG() {
           variants={{
             initial: { opacity: 0 },
             animate: {
-              opacity: 0.07,
+              opacity: 0.7,
               transition: { duration: 1, ease: "easeInOut" },
             },
           }}
@@ -288,7 +288,7 @@ export default function BG() {
           variants={{
             initial: { opacity: 0 },
             animate: {
-              opacity: 0.06,
+              opacity: 0.7,
               transition: { duration: 1, ease: "easeInOut" },
             },
           }}
@@ -304,7 +304,7 @@ export default function BG() {
           variants={{
             initial: { opacity: 0 },
             animate: {
-              opacity: 0.06,
+              opacity: 0.8,
               transition: { duration: 1, ease: "easeInOut" },
             },
           }}
