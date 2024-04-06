@@ -5,8 +5,10 @@ import { motion, useTransform, useScroll, useSpring } from "framer-motion";
 import PhoneAnimation from "./phone";
 import { PlusSVG } from "@/components/device";
 import { useRef } from "react";
+import { useDimension } from "@/hooks/useDimension";
 
 export default function Workflow() {
+  const { width } = useDimension();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -17,7 +19,7 @@ export default function Workflow() {
     stiffness: 500,
     damping: 90,
   });
-  const y2 = useSpring(useTransform(scrollYProgress, [0, 1], [150, 50]), {
+  const y2 = useSpring(useTransform(scrollYProgress, [0, 1], [300, 50]), {
     stiffness: 500,
     damping: 90,
   });
@@ -33,8 +35,9 @@ export default function Workflow() {
   });
 
   return (
-    <motion.section className="hidden md:block relative h-[50vh] mt-16 md:mt-24 lg:mt-52">
-      <motion.div ref={ref} className="relative w-full h-[50vh] flex items-center justify-evenly">
+    <motion.section style={{ scale: (width > 865 ? 1 : width / 1000) }} className="relative">
+      <h1 className="font-heading text-7xl text-center mb-12 md:mt-32 lg:mt-44">Instant feedback</h1>
+      <motion.div ref={ref} className="relative w-full h-full flex items-center justify-center gap-32 lg:gap-44">
         <div id="phone-container" className="flex justify-center items-center">
           <PhoneAnimation />
         </div>
@@ -72,6 +75,9 @@ export default function Workflow() {
                 </linearGradient>
               </defs>
             </svg>
+            <div className="absolute -top-[30px] left-1/2 -translate-x-1/2">
+              <h1 className="font-link text-lg text-center">~400 ms</h1>
+            </div>
             <PlusSVG
               className="absolute -top-[13px] -left-[13px]"
               style={{ scale: 0.6 }}
@@ -90,7 +96,7 @@ export default function Workflow() {
             />
           </div>
         </div>
-        <div id="device" className="h-full flex justify-between items-center">
+        <div id="device" className="h-[300px] shrink-0 flex justify-between items-center">
           <Image
             src="/image/device.svg"
             alt="device"
