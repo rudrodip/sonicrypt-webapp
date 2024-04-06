@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="w-full min-h-screen flex flex-col gap-6 justify-center"
+      className="w-full mt-16 sm:mt-0 lg:min-h-screen flex flex-col gap-6 justify-center"
     >
       <HeadingText />
       <Device />
