@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import { useMotionTemplate, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-export const EvervaultCard = ({
+export const HoverCard = ({
   text,
   className,
 }: {
@@ -49,8 +49,8 @@ export const EvervaultCard = ({
         />
         <div className="relative z-10 flex items-center justify-center">
           <div className="relative h-44 w-44  rounded-full flex items-center justify-center text-white font-bold text-4xl">
-            <div className="absolute w-full h-full bg-white/[0.8] dark:bg-black/[0.8] blur-sm rounded-full" />
-            <span className="dark:text-white text-black z-20 text-4xl">{text}</span>
+            <div className="absolute w-full h-full bg-white/[0.8] dark:bg-black/[0.8] blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-100 delay-75" />
+            <span className="dark:text-white text-black z-20 text-4xl opacity-0 group-hover:opacity-100 transition-all duration-100 delay-75">{text}</span>
           </div>
         </div>
       </div>
