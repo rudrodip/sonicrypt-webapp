@@ -37,7 +37,7 @@ export default function Features() {
             />
           </motion.div>
           <div className="flex flex-col w-full">
-            <motion.h1 variants={fadeUp} initial="hidden" whileInView="visible" className="font-heading text-7xl tracking-tight">
+            <motion.h1 variants={fadeUp} initial="hidden" whileInView="visible" className="font-heading text-4xl md:text-7xl tracking-tight">
               Self-Contained Operation
             </motion.h1>
             <div className="flex h-full w-full items-center justify-end">
@@ -55,13 +55,13 @@ export default function Features() {
         <div className="group relative w-full h-[25rem] rounded-3xl border-2 text-right flex flex-col justify-center items-center">
           <HoverCard text="450 ms" className="text-5xl" />
           <div className="abs-center w-full h-full opacity-100 group-hover:opacity-0 transition-all duration-100 delay-75 flex justify-center items-center z-[-100]">
-            <motion.h1 variants={fadeUp} initial="hidden" whileInView="visible" className="text-4xl md:text-5xl lg:text-6xl font-heading text-center">Super fast response</motion.h1>
+            <motion.h1 variants={fadeUp} initial="hidden" whileInView="visible" className="text-3xl md:text-5xl lg:text-6xl font-heading text-center">Super fast response</motion.h1>
           </div>
         </div>
         <div className="group relative w-full h-[25rem] rounded-3xl border-2 text-right flex flex-col justify-center items-center">
           <HoverCard text="160 mA" className="text-5xl" />
           <div className="abs-center w-full h-full opacity-100 group-hover:opacity-0 transition-all duration-100 delay-75 flex justify-center items-center z-[-100]">
-            <motion.h1 variants={fadeUp} initial="hidden" whileInView="visible" className="font-heading text-4xl md:text-5xl lg:text-6xl tracking-tight text-center px-3">Low power consumption</motion.h1>
+            <motion.h1 variants={fadeUp} initial="hidden" whileInView="visible" className="font-heading text-3xl md:text-5xl lg:text-6xl tracking-tight text-center px-3">Low power consumption</motion.h1>
           </div>
         </div>
         <div className="w-full h-[25rem] col-span-2 rounded-3xl border-2 p-3 lg:p-5 flex">
@@ -75,7 +75,7 @@ export default function Features() {
             />
           </motion.div>
           <div className="flex flex-col w-full">
-            <motion.h1 variants={fadeUp} initial="hidden" whileInView="visible" className="font-heading text-7xl tracking-tight text-right">
+            <motion.h1 variants={fadeUp} initial="hidden" whileInView="visible" className="font-heading text-5xl md:text-7xl tracking-tight text-right">
               Built-in Emulator
             </motion.h1>
             <div className="flex h-full w-full items-center justify-end">
