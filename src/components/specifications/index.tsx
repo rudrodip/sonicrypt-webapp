@@ -228,7 +228,7 @@ export default function Specs() {
                 id="module-container"
                 className="w-full h-full flex justify-center items-center"
                 initial={{
-                  scale: 2,
+                  scale: 1.1,
                   opacity: 0,
                 }}
               >
@@ -237,7 +237,7 @@ export default function Specs() {
                     id="circle-container"
                     className="w-full h-full flex justify-center items-center"
                     initial={{
-                      scale: 2,
+                      scale: 1.1,
                       opacity: 0,
                     }}
                   >

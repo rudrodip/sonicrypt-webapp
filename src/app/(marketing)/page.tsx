@@ -1,4 +1,6 @@
 "use client";
+import CobeGlobe from "@/components/cobe";
+import Features from "@/components/features";
 import Hero from "@/components/hero";
 import VideoPreview from "@/components/video-preview";
 import dynamic from "next/dynamic";
@@ -26,6 +28,12 @@ export default function Home() {
       </div>
       <div className="w-full min-h-screen">
         <Products />
+      </div>
+      <div className="w-full min-h-screen">
+        <Features />
+      </div>
+      <div className="w-full min-h-screen">
+        <CobeGlobe />
       </div>
     </div>
   );

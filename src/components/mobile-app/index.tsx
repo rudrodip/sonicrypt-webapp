@@ -57,7 +57,7 @@ export default function MobileAppSection() {
                 as="button"
                 className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
               >
-                Download
+                <a href="https://github.com/rudrodip/sonicrypt-app/releases" target="_blank">Download</a>
               </HoverBorderGradient>
             </motion.div>
             <div className="md:hidden my-12 w-full justify-center items-center">
