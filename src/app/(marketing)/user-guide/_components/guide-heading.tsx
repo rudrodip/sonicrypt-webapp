@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const GuideHeading = () => {
   return (
     <>
-      <motion.h1 className="text-center head-text tracking-tight">
+      <motion.h1 className="text-center head-text-md tracking-tight mt-12 sm:mt-0">
         User Guide
       </motion.h1>
       <motion.p
