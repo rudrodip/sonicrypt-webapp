@@ -24,7 +24,7 @@ export default function Features() {
     <section>
       <section
         id="bento"
-        className="w-full max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-3 gap-5 items-center mt-12 md:mt-16"
+        className="w-full max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-3 gap-5 items-center mb-16 md:mb-24 lg:mb-44"
       >
         <div className="w-full h-[25rem] col-span-2 rounded-3xl border-2 p-3 lg:p-5 flex flex-row-reverse">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" className="hidden md:flex shrink-0 justify-center items-center mx-5">
