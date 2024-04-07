@@ -130,7 +130,7 @@ export default function Specs() {
     >
       <motion.div initial={{ y: 5 }} whileInView={{ y: -100 }} className="relative w-full">
         <motion.h1
-          className="abs-center head-text-md text-center"
+          className="abs-center text-4xl md:text-6xl lg:text-7xl text-center"
           initial={{
             opacity: 0,
             y: 20,
