@@ -36,7 +36,7 @@ export default function PhoneAnimation() {
   }, [success]);
 
   return (
-    <div className="relative w-[300px] aspect-[1/2] border-4 rounded-lg flex flex-col justify-between items-center bg-zinc-900 pb-3">
+    <div className="relative w-[300px] aspect-[1/2] border-4 rounded-lg flex flex-col justify-between items-center bg-secondary/50 pb-3">
       <div
         id="punch-hole-camera"
         className="absolute w-3 h-3 rounded-full bg-black left-1/2 -translate-x-1/2 top-3"
@@ -52,6 +52,7 @@ export default function PhoneAnimation() {
       }
       <div className="w-full mb-2 px-2">
         <Button
+        variant="default"
           className={cn(
             "w-full h-full rounded-full p-0",
             sending && "bg-secondary text-secondary-foreground",
@@ -79,17 +80,17 @@ const Summary = () => {
       <h1 className="font-sans text-muted-foreground text-xl font-semilbold tracking-tight mt-2">
         $17.23
       </h1>
-      <div className="flex flex-col justify-center items-center w-full rounded-md bg-zinc-800 mt-5">
+      <div className="flex flex-col justify-center items-center w-full rounded-md bg-secondary-foreground/10 mt-5">
         <div className="w-full p-3 flex justify-between items-center">
           <h1 className="text-muted-foreground">To</h1>
           <h1 className="font-semibold">HMgt...cC17</h1>
         </div>
-        <Separator className="w-full bg-zinc-700" />
+        <Separator className="w-full bg-accent" />
         <div className="w-full p-3 flex justify-between items-center">
           <h1 className="text-muted-foreground">Network</h1>
           <h1 className="font-semibold">Solana Devnet</h1>
         </div>
-        <Separator className="w-full bg-zinc-700" />
+        <Separator className="w-full bg-accent" />
         <div className="w-full p-3 flex justify-between items-center">
           <h1 className="text-muted-foreground flex justify-center items-center">
             Network fee{" "}
