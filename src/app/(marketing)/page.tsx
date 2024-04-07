@@ -17,20 +17,20 @@ export default function Home() {
       <div className="w-full mt-24 lg:mt-0 lg:min-h-screen flex justify-center items-center">
         <VideoPreview />
       </div>
-      <div className="w-full">
-        <Workflow />
-      </div>
       <div className="w-full min-h-screen">
         <Specs />
       </div>
       <div className="w-full min-h-screen">
+        <Features />
+      </div>
+      <div className="w-full min-h-screen">
         <MobileAppSection />
+      </div>
+      <div className="w-full">
+        <Workflow />
       </div>
       <div className="w-full min-h-screen">
         <Products />
-      </div>
-      <div className="w-full min-h-screen">
-        <Features />
       </div>
       <div className="w-full min-h-screen">
         <CobeGlobe />
