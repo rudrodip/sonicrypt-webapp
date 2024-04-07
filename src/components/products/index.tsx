@@ -7,9 +7,9 @@ import { CanvasRevealEffect } from "@/components/canvas-reveal-effect";
 
 export default function Products() {
   return (
-    <>
+    <section className="w-full max-w-7xl mx-auto">
       <h1 className="head-text-md text-center mt-32">Product line</h1>
-      <div className="py-10 md:py-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-8">
+      <div className="py-10 md:py-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         <Card
           title="Sonicrypt plus"
           features={["Voice confirmation", "Multi-wallet support", "LCD display"]}
@@ -56,7 +56,7 @@ export default function Products() {
           />
         </Card>
       </div>
-    </>
+    </section>
   );
 }
 
@@ -76,7 +76,7 @@ const Card = ({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 h-[30rem] relative"
+      className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2] w-full max-w-sm mx-auto p-4 h-[30rem] relative"
     >
       <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
       <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
