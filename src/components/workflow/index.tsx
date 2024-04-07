@@ -15,29 +15,19 @@ export default function Workflow() {
     offset: ["start start", "start end"],
   });
 
-  const y1 = useSpring(useTransform(scrollYProgress, [0, 0.8], [190, 50]), {
+  const y1 = useSpring(useTransform(scrollYProgress, [0, 0.6], [150, 60]), {
     stiffness: 500,
     damping: 90,
   });
-  const y2 = useSpring(useTransform(scrollYProgress, [0, 1], [300, 50]), {
-    stiffness: 500,
-    damping: 90,
-  });
-
-  const x1 = useSpring(useTransform(scrollYProgress, [0, 1], [800, 0]), {
-    stiffness: 500,
-    damping: 90,
-  });
-
-  const x2 = useSpring(useTransform(scrollYProgress, [0, 1], [150, 50]), {
+  const y2 = useSpring(useTransform(scrollYProgress, [0, 0.5], [300, 50]), {
     stiffness: 500,
     damping: 90,
   });
 
   return (
-    <motion.section style={{ scale: (width > 865 ? 1 : width / 900) }} className="relative">
+    <motion.section style={{ scale: (width > 865 ? 1 : width / 900) }} className="relative w-full max-w-7xl mx-auto">
       <h1 className="hidden sm:block head-text-md text-center mb-12">Instant feedback</h1>
-      <motion.div ref={ref} className="relative w-full h-full flex items-center justify-center gap-32 lg:gap-44">
+      <motion.div ref={ref} className="relative w-full h-full flex items-center justify-between gap-32 lg:gap-44">
         <div id="phone-container" className="flex justify-center items-center">
           <PhoneAnimation />
         </div>
@@ -106,29 +96,18 @@ export default function Workflow() {
         </div>
         <div className="abs-center -z-50">
           <motion.svg
-            width="811"
+            width={width}
             height="479"
-            viewBox="0 0 811 479"
+            viewBox={`0 0 ${width} 479`}
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <motion.g id="linear">
               <motion.path
                 id="Vector 1"
-                d="M1 1C209 164.2 627.667 200 811 197.5"
+                d={`M1 1C209 164.2 627.667 200 ${width * 0.9} 197.5`}
                 fill="none"
                 stroke="url(#gradient)"
-                strokeWidth="1.25"
-                className="motion-reduce:hidden"
-                transition={{
-                  duration: 10,
-                }}
-              />
-              <motion.path
-                id="Vector 2"
-                d="M1 477.62C209 314.42 627.667 278.62 811 281.12"
-                fill="none"
-                stroke="url(#gradient2)"
                 strokeWidth="1.25"
                 className="motion-reduce:hidden"
                 transition={{
@@ -150,18 +129,42 @@ export default function Workflow() {
                 <stop offset="0.325" stopColor="#6344F5"></stop>
                 <stop offset="1" stopColor="#AE48FF" stopOpacity="0"></stop>
               </motion.linearGradient>
+            </defs>
+          </motion.svg>
+          <motion.svg
+            width={width}
+            height="479"
+            viewBox={`0 0 ${width} 479`}
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="abs-center scale-y-[-1]"
+          >
+            <motion.g id="linear">
+              <motion.path
+                id="Vector 1"
+                d={`M1 1C209 164.2 627.667 200 ${width * 0.9} 197.5`}
+                fill="none"
+                stroke="url(#gradient)"
+                strokeWidth="1.25"
+                className="motion-reduce:hidden"
+                transition={{
+                  duration: 10,
+                }}
+              />
+            </motion.g>
+            <defs>
               <motion.linearGradient
-                id="gradient2"
+                id="gradient"
                 gradientUnits="userSpaceOnUse"
-                x1={x1}
-                x2={x2}
-                y1="340"
-                y2="340"
+                x1="0"
+                x2="0"
+                y1={y1}
+                y2={y2}
               >
-                <stop stopColor="#6344F5" stopOpacity="0"></stop>
-                <stop stopColor="#AE48FF"></stop>
-                <stop offset="0.325" stopColor="#18CCFC"></stop>
-                <stop offset="1" stopColor="#18CCFC" stopOpacity="0"></stop>
+                <stop stopColor="#18CCFC" stopOpacity="0"></stop>
+                <stop stopColor="#18CCFC"></stop>
+                <stop offset="0.325" stopColor="#6344F5"></stop>
+                <stop offset="1" stopColor="#AE48FF" stopOpacity="0"></stop>
               </motion.linearGradient>
             </defs>
           </motion.svg>
