@@ -15,7 +15,7 @@ const appFeatures = [
 export default function MobileAppSection() {
   return (
     <section className="w-full flex justify-center items-center">
-      <div className="w-full max-w-6xl mx-auto h-[80vh] flex justify-between items-center">
+      <div className="w-full max-w-6xl mx-auto flex flex-wrap md:flex-nowrap justify-between items-center">
         <div className="w-full h-full flex flex-col justify-start">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -50,22 +50,22 @@ export default function MobileAppSection() {
                 scale: 1.2,
                 transition: { duration: 0.25 },
               }}
-              className="ml-0 md:ml-16 lg:ml-32"
+              className="ml-12 md:ml-16 lg:ml-32"
             >
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 as="button"
                 className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
               >
-                <a href="https://github.com/rudrodip/sonicrypt-app/releases" target="_blank">Download</a>
+                <a href="https://github.com/Sonicrypt/sonicrypt-app/releases" target="_blank">Download</a>
               </HoverBorderGradient>
             </motion.div>
-            <div className="md:hidden my-12 w-full justify-center items-center">
+            {/* <div className="md:hidden my-12 w-full justify-center items-center">
               <FloatingPhone />
-            </div>
+            </div> */}
           </motion.div>
         </div>
-        <div className="hidden md:flex h-full justify-center items-center">
+        <div className="flex h-full justify-center items-center w-full md:w-auto mx-auto mt-12 md:mt-0">
           <FloatingPhone />
         </div>
       </div>

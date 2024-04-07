@@ -1,12 +1,17 @@
-"use client";
+import GuideSection from "../guide";
 
-import { motion } from "framer-motion";
+const steps = [
+  "Go to BLE section by clicking on bluetooth icon",
+  "Give both bluetooth and location permission",
+  "Select the device, and the characteristics ID of your device",
+];
 
 export default function ConnectSection() {
-    return (
-        <>
-            <h1 className="head-text-md">Connect</h1>
-            <p>Let&apos;s connect your device to the app</p>
-        </>
-    )
+  return (
+    <GuideSection
+      title="Connect"
+      steps={steps}
+      media="/image/device.svg"
+    />
+  );
 }

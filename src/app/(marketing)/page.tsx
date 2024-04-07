@@ -1,6 +1,5 @@
 "use client";
-import CobeGlobe from "@/components/cobe";
-import Features from "@/components/features";
+
 import Hero from "@/components/hero";
 import VideoPreview from "@/components/video-preview";
 import dynamic from "next/dynamic";
@@ -9,6 +8,8 @@ const MobileAppSection = dynamic(() => import("@/components/mobile-app"));
 const Products = dynamic(() => import("@/components/products"));
 const Specs = dynamic(() => import("@/components/specifications"));
 const Workflow = dynamic(() => import("@/components/workflow"));
+const CobeGlobe = dynamic(() => import("@/components/cobe"));
+const Features = dynamic(() => import("@/components/features"));
 
 export default function Home() {
   return (
@@ -26,13 +27,13 @@ export default function Home() {
       <div className="w-full min-h-screen">
         <MobileAppSection />
       </div>
-      <div className="w-full">
+      <div className="hidden md:block w-full">
         <Workflow />
       </div>
       <div className="w-full min-h-screen">
         <Products />
       </div>
-      <div className="w-full min-h-screen">
+      <div className="w-full">
         <CobeGlobe />
       </div>
     </div>

@@ -1,12 +1,19 @@
-"use client";
+import GuideSection from "../guide";
 
-import { motion } from "framer-motion";
+const steps = [
+  "Either connect your wallet or input the wallet address in the input form",
+  "Select the blockchain network or leave it as default",
+  "On each transaction, the emulator will notify you like the physical device",
+  "You can view the transaction history by clicking on the 'Transaction' tab",
+  "Recent transactions will be displayed below the emulator",
+];
 
 export default function EmulatorSection() {
-    return (
-        <>
-            <h1 className="head-text-md">Emulator</h1>
-            <p>Let&apos;s connect your device to the app</p>
-        </>
-    )
+  return (
+    <GuideSection
+      title="Emulator"
+      steps={steps}
+      media="/image/device.svg"
+    />
+  );
 }

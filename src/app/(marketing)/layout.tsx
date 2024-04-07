@@ -2,6 +2,7 @@ import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { DefaultGlyphButton } from "@/components/glyph-button";
 import WalletButton from "@/components/wallet-button";
+import Footer from "@/components/footer";
 
 export default function RootLayout({
   children,
@@ -32,9 +33,10 @@ export default function RootLayout({
           <WalletButton />
         </div>
       </header>
-      <main className="w-full px-2 md:px-0">
+      <main className="flex-1 w-full px-2 md:px-0">
         {children}
       </main>
+      <Footer />
     </section>
   );
 }
