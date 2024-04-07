@@ -1,7 +1,7 @@
 "use client";
+import CobeGlobe from "@/components/cobe";
 import Hero from "@/components/hero";
 import VideoPreview from "@/components/video-preview";
-import SolanaGlobe from "@/components/globe";
 import dynamic from "next/dynamic";
 
 const MobileAppSection = dynamic(() => import("@/components/mobile-app"));
@@ -29,7 +29,7 @@ export default function Home() {
         <Products />
       </div>
       <div className="w-full min-h-screen">
-        <SolanaGlobe />
+        <CobeGlobe />
       </div>
     </div>
   );
