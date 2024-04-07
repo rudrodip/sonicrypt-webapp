@@ -13,7 +13,7 @@ export default function EmulatorSection() {
     <GuideSection
       title="Emulator"
       steps={steps}
-      media="/image/device.svg"
+      media="https://firebasestorage.googleapis.com/v0/b/collabsync-yt.appspot.com/o/emulator.webm?alt=media&token=398608d6-4836-4f47-971a-b9108fe5574c"
     />
   );
 }
