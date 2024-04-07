@@ -3,18 +3,21 @@
 import { motion } from "framer-motion";
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
+import { useDimension } from "@/hooks/useDimension";
 
 export default function CobeGlobe() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { width } = useDimension();
 
   useEffect(() => {
     let phi = 0;
+    let globeDimension = width > 768 ? 600 : 300;
 
     if (canvasRef.current) {
       const globe = createGlobe(canvasRef.current, {
         devicePixelRatio: 2,
-        width: 600 * 2,
-        height: 600 * 2,
+        width: globeDimension * 2,
+        height: globeDimension * 2,
         phi: 0,
         theta: 0,
         dark: 1,
@@ -41,7 +44,7 @@ export default function CobeGlobe() {
   }, []);
 
   return (
-    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto relative w-full">
+    <div className="flex flex-row items-center justify-center py-20 md:h-auto relative w-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-full px-4">
         <motion.div
           initial={{
@@ -69,8 +72,8 @@ export default function CobeGlobe() {
           <canvas
             ref={canvasRef}
             style={{
-              width: 600,
-              height: 600,
+              width: width > 768 ? 600 : 300,
+              height: width > 768 ? 600 : 300,
               maxWidth: "100%",
               aspectRatio: 1,
               backgroundColor: "transparent",

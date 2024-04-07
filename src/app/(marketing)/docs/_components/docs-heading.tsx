@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 
-export const GuideHeading = () => {
+export const DocsHeading = () => {
   return (
     <>
       <motion.h1 className="text-center head-text-md tracking-tight mt-12 sm:mt-0">
-        User Guide
+        Developer Docs
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, translateY: 20 }}
@@ -23,9 +23,9 @@ export const GuideHeading = () => {
           }}
           className="bg-clip-text text-transparent"
         >
-          connect
+          hop
         </motion.span>{" "}
-        and{" "}
+        on to the{" "}
         <motion.span
           animate={{ backgroundColor: ["#db2777", "#ef4444"] }}
           transition={{
@@ -35,9 +35,8 @@ export const GuideHeading = () => {
           }}
           className="bg-clip-text text-transparent"
         >
-          configure
+          codebase
         </motion.span>{" "}
-        your <span className="gray">device</span>
       </motion.p>
     </>
   );

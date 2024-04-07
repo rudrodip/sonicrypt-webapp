@@ -1,12 +1,18 @@
-"use client";
+import GuideSection from "../guide";
 
-import { motion } from "framer-motion";
+const steps = [
+  "Connect your solana wallet to the app or just input the wallet address in the input form",
+  "Enter necessary info in the fields",
+  "Select blockchain network or leave it as default",
+  "Click on the 'Submit' button to configure your device",
+];
 
 export default function ConfigureSection() {
-    return (
-        <>
-            <h1 className="head-text-md">Configure</h1>
-            <p>Let&apos;s connect your device to the app</p>
-        </>
-    )
+  return (
+    <GuideSection
+      title="Configure"
+      steps={steps}
+      media="/image/device.svg"
+    />
+  );
 }
