@@ -36,7 +36,7 @@ export default function PhoneAnimation() {
   }, [success]);
 
   return (
-    <div className="relative w-[300px] aspect-[1/2] border-4 rounded-lg flex flex-col justify-between items-center bg-secondary/50 pb-3">
+    <div className="relative w-[300px] aspect-[1/2] border-4 rounded-lg flex flex-col justify-between items-center bg-background dark:bg-zinc-900 pb-3">
       <div
         id="punch-hole-camera"
         className="absolute w-3 h-3 rounded-full bg-black left-1/2 -translate-x-1/2 top-3"

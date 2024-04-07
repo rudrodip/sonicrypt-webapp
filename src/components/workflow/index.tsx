@@ -15,11 +15,11 @@ export default function Workflow() {
     offset: ["start start", "start end"],
   });
 
-  const y1 = useSpring(useTransform(scrollYProgress, [0, 0.6], [150, 60]), {
+  const y1 = useSpring(useTransform(scrollYProgress, [0, 0.7], [150, 60]), {
     stiffness: 500,
     damping: 90,
   });
-  const y2 = useSpring(useTransform(scrollYProgress, [0, 0.5], [300, 50]), {
+  const y2 = useSpring(useTransform(scrollYProgress, [0, 0.7], [300, 50]), {
     stiffness: 500,
     damping: 90,
   });
@@ -161,10 +161,10 @@ export default function Workflow() {
                 y1={y1}
                 y2={y2}
               >
-                <stop stopColor="#18CCFC" stopOpacity="0"></stop>
+                <stop stopColor="#18CCFC"></stop>
                 <stop stopColor="#18CCFC"></stop>
                 <stop offset="0.325" stopColor="#6344F5"></stop>
-                <stop offset="1" stopColor="#AE48FF" stopOpacity="0"></stop>
+                <stop offset="1" stopColor="#AE48FF"></stop>
               </motion.linearGradient>
             </defs>
           </motion.svg>

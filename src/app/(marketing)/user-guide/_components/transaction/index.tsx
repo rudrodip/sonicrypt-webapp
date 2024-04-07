@@ -12,7 +12,7 @@ export default function TransactionSection() {
     <GuideSection
       title="Transaction"
       steps={steps}
-      media="/image/device.svg"
+      media="https://firebasestorage.googleapis.com/v0/b/collabsync-yt.appspot.com/o/transaction.webm?alt=media&token=80920f6a-0835-4551-b09c-5ed478941087"
     />
   );
 }

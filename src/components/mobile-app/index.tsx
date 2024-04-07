@@ -20,20 +20,50 @@ export default function MobileAppSection() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-            className="head-text-md lg:mb-20"
+            className="head-text-md mb-2 md:mb-5"
           >
             Sonicrypt app
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              x: 0,
+              transition: { duration: 0.25 },
+            }}
+            className=""
+          >
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
+              <a
+                href="https://github.com/Sonicrypt/sonicrypt-app/releases"
+                target="_blank"
+              >
+                Download
+              </a>
+            </HoverBorderGradient>
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+            className="text-3xl md:text-4xl lg:text-5xl font-semibold mt-2 md:mt-5"
+          >
+            Features
           </motion.h1>
           <motion.div className="mt-6 flex flex-col justify-center">
             {appFeatures.map((feature, index) => (
               <motion.p
                 key={index}
-                className="font-sans tracking-tight font-semibold text-2xl lg:text-4xl py-1 md:py-3 ml-6"
+                className="font-sans tracking-tight text-2xl lg:text-4xl py-1 md:py-3 ml-6"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{
                   opacity: 1,
                   y: -20,
-                  x: 20,
+                  x: 0,
                   transition: { duration: 0.25, delay: index * 0.125 },
                 }}
               >
@@ -41,28 +71,6 @@ export default function MobileAppSection() {
                 {feature}
               </motion.p>
             ))}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{
-                opacity: 1,
-                y: 20,
-                x: 0,
-                scale: 1.2,
-                transition: { duration: 0.25 },
-              }}
-              className="ml-12 md:ml-16 lg:ml-32"
-            >
-              <HoverBorderGradient
-                containerClassName="rounded-full"
-                as="button"
-                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
-              >
-                <a href="https://github.com/Sonicrypt/sonicrypt-app/releases" target="_blank">Download</a>
-              </HoverBorderGradient>
-            </motion.div>
-            {/* <div className="md:hidden my-12 w-full justify-center items-center">
-              <FloatingPhone />
-            </div> */}
           </motion.div>
         </div>
         <div className="flex h-full justify-center items-center w-full md:w-auto mx-auto mt-12 md:mt-0">
