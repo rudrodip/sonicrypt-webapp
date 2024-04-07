@@ -186,6 +186,10 @@
   @apply bg-gradient-to-b from-slate-400 to-slate-700 bg-clip-text text-transparent;
 }
 
+.sol-grad {
+  @apply bg-gradient-to-r from-[#9945FF] to-[#14F195] bg-clip-text text-transparent;
+}
+
 .desc {
   @apply mt-5 text-lg sm:text-xl max-w-2xl;
 }
