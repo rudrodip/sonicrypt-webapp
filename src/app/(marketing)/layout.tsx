@@ -17,10 +17,10 @@ export default function RootLayout({
             className="text-center flex items-center lowercase font-link"
           />
           <div className="hidden sm:block">
-            <Link href="/about" className={buttonVariants({ variant: "link" })}>
+            <Link href="/" className={buttonVariants({ variant: "link" })}>
               About
             </Link>
-            <Link href="/docs" className={buttonVariants({ variant: "link" })}>
+            <Link href="/user-guide" className={buttonVariants({ variant: "link" })}>
               User Guide
             </Link>
             <Link href="/docs" className={buttonVariants({ variant: "link" })}>
