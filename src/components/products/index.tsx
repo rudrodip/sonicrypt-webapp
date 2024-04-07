@@ -107,7 +107,7 @@ const Card = ({
         {features.map((feature, index) => (
           <h2
             key={index}
-            className="dark:text-white text-2xl font-heading opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4 ml-4 group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200"
+            className="dark:text-white text-2xl opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4 ml-4 group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200"
           >
             {"> "}
             {feature}

@@ -63,7 +63,7 @@ export default function CobeGlobe() {
           <h2 className="text-center text-xl md:text-4xl font-bold font-heading tracking-tight">
             Notifying each transaction realtime
           </h2>
-          <p className="text-center text-base md:text-lg font-normal max-w-md mt-2 mx-auto">
+          <p className="text-center md:text-lg max-w-md mt-2 mx-auto">
             Sonicrypt provides realtime notifications for each transaction on
             your account directly from the solana blockchain
           </p>
