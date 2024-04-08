@@ -12,7 +12,7 @@ export default function ConfigureSection() {
     <GuideSection
       title="Configure"
       steps={steps}
-      media="https://firebasestorage.googleapis.com/v0/b/collabsync-yt.appspot.com/o/sonicrypt-demo.webm?alt=media&token=dc105662-fd7c-44a5-bb76-db9a3ba25693"
+      media="https://firebasestorage.googleapis.com/v0/b/collabsync-yt.appspot.com/o/configure.webm?alt=media&token=6d2be0a5-b198-43cb-a6be-5031881e43bd"
     />
   );
 }
