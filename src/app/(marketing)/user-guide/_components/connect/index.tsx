@@ -11,7 +11,7 @@ export default function ConnectSection() {
     <GuideSection
       title="Connect"
       steps={steps}
-      media="https://firebasestorage.googleapis.com/v0/b/collabsync-yt.appspot.com/o/sonicrypt-demo.webm?alt=media&token=dc105662-fd7c-44a5-bb76-db9a3ba25693"
+      media="https://firebasestorage.googleapis.com/v0/b/collabsync-yt.appspot.com/o/connect.webm?alt=media&token=6f18a518-35e8-4be5-bcc4-ad2abd0b808b"
     />
   );
 }
