@@ -108,7 +108,7 @@ const FloatingPhone = () => {
         transition={{
           duration: 1,
         }}
-        className="relative w-[300px] aspect-[1/2] flex flex-col border-4 rounded-lg justify-between items-center bg-zinc-900 mx-auto"
+        className="relative w-[300px] aspect-[1/2] flex flex-col border-4 border-zinc-900 rounded-lg justify-between items-center bg-zinc-900 mx-auto"
       >
         <div
           id="punch-hole-camera"
