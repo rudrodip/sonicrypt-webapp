@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/sheet";
 import { MobileNav } from "./mobile-navbar";
 import { MenuIcon } from "lucide-react";
+import ThemeToggler from "@/components/theme/theme-toggler";
 
 export default function Navbar() {
   return (
@@ -51,13 +52,14 @@ export default function Navbar() {
           >
             User Guide
           </Link>
-          <Link href="/docs" className={buttonVariants({ variant: "link" })}>
+          {/* <Link href="/docs" className={buttonVariants({ variant: "link" })}>
             Developer Guide
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className="flex items-center gap-5">
         <WalletButton />
+        <ThemeToggler />
       </div>
     </header>
   );

@@ -7,7 +7,7 @@ export const siteConfig: SiteConfig = {
   url: "https://sonicrypt.vercel.app",
   ogImage: "https://sonicrypt.vercel.app/og.png",
   links: {
-    twitter: "https://twitter.com/rds_agi",
+    twitter: "https://twitter.com/Sonicrypt",
     github: "https://github.com/Sonicrypt",
   },
 };
