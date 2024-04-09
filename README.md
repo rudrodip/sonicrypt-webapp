@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sonicrypt
 
-## Getting Started
+## Overview
 
-First, run the development server:
+Sonicrypt is an organization focused on improving the user experience for crypto transactions. Our goal is to make digital transactions more tangible and build trust between buyers and sellers.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Products
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. Sonicrypt Device
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The Sonicrypt Device is a compact tool that provides audio and visual confirmation of successful crypto payments. It aims to enhance the experience for both buyers and sellers involved in these transactions.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Features
 
-## Learn More
+- Audio confirmation of successful payments
+- Visual confirmation of successful payments
+- Voice confirmation of successful payments (Sonicrypt Plus & Sonicrypt Pro)
+- Support for multiple wallets (Sonicrypt Plus & Sonicrypt Pro)
+- Support for multiple blockchains (Sonicrypt Pro)
+- Generate QR codes on-the-fly (Sonicrypt Pro)
+- Off-chain transactions (Sonicrypt Pro)
 
-To learn more about Next.js, take a look at the following resources:
+#### Components (Sonicrypt)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ESP32
+- LED
+- Buzzer
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Components (Sonicrypt plus)
 
-## Deploy on Vercel
+- ESP32
+- LED
+- Display
+- Speaker
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Components (Sonicrypt pro)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Raspberry Pi
+- LED
+- Display
+- Speaker
+- Microphone
+
+#### User Workflow
+
+1. The seller generates a QR code using the Sonicrypt app.
+2. The buyer scans the QR code using their wallet app.
+3. The buyer sends the payment to the seller.
+4. The Sonicrypt device plays a sound and lights up when the payment is confirmed.
+5. The seller provides the product to the buyer.
+6. The transaction is complete.
+
+#### How it Works
+
+1. The Sonicrypt device connects to the blockchain network (Solana) websocket to listen for account changes.
+2. It listens to changes in the seller's wallet address.
+3. When a change is detected, it retrieves the last transaction signature.
+4. It fetches the transaction details using the signature.
+5. If the transaction is successful, the Sonicrypt device plays a sound and lights up.
+
+### 2. Sonicrypt App
+
+The Sonicrypt App is a mobile application that allows users to connect and configure their Sonicrypt devices. It serves as an interface for interacting with the device and managing aspects of the crypto transaction process.
+
+#### Tech Stack
+
+- React Native
+- Expo
+- Tamagui
+- React Native BLE PLX
+
+#### Features of app
+
+- Connect to Sonicrypt device
+- View Sonicrypt device status and logs
+- Mock Sonicrypt device
+- Get transaction details and history
+- Get daily transaction summary
+- Customize Sonicrypt device settings
+
+## Open-Source and No Hidden Costs
+
+Sonicrypt is an open-source project, and we are committed to keeping it that way. The device does not connect to any servers or third-party services, ensuring privacy and transparency. It is a standalone device that you can use without any subscription fees or hidden costs. Both the software and hardware are open-source, allowing you to modify and customize the solution according to your needs.
+
+## Get Involved
+
+We welcome contributions from the community to further enhance the Sonicrypt ecosystem. Whether you're a developer, designer, or an enthusiast, there are numerous ways to get involved. Visit our [GitHub repository](https://github.com/Sonicrypt/sonicrypt) to explore the codebase, submit issues, or contribute to the project.
+
+## Stay Connected
+
+Stay up-to-date with the latest developments, announcements, and updates from the Sonicrypt team by following us on social media:
+
+- Twitter: [@Sonicrypt](https://twitter.com/sonicrypt)
+
+Join our community and be part of the effort to improve crypto transactions!
