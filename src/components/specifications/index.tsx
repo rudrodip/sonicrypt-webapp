@@ -287,7 +287,7 @@ export default function Specs() {
             duration: 10,
           }}
           className="motion-reduce:hidden"
-          strokeWidth="1.25"
+          strokeWidth="2"
         />
         <motion.path
           d={`M2 ${svgHeight * 1}L90.5 ${svgHeight * 0.9}V${svgHeight * 0.3}`}
@@ -297,7 +297,7 @@ export default function Specs() {
             duration: 10,
           }}
           className="motion-reduce:hidden"
-          strokeWidth="1.25"
+          strokeWidth="2"
         />
         <defs>
           <motion.linearGradient
