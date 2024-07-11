@@ -6,8 +6,8 @@ import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import BG from "@/components/bg";
 import LenisProvider from "@/components/lenis-provider";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const fontSans = localFont({
   src: "../../assets/fonts/TASAOrbiterVF.woff2",
@@ -105,17 +105,18 @@ export default function RootLayout({
         )}
         suppressHydrationWarning={true}
       >
-        <BG />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <SolanaWalletProvider>
-            <LenisProvider>{children}</LenisProvider>
-          </SolanaWalletProvider>
-        </ThemeProvider>
+        <ClerkProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <SolanaWalletProvider>
+              <LenisProvider>{children}</LenisProvider>
+            </SolanaWalletProvider>
+          </ThemeProvider>
+        </ClerkProvider>
       </body>
     </html>
   );
