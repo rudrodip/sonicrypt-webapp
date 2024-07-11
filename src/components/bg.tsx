@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 export default function BG() {
   return (
     <motion.svg
-      width="1440"
-      height="900"
       viewBox="0 0 1440 900"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
