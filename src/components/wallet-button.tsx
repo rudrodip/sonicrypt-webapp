@@ -9,6 +9,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 export default function WalletButton() {
   const { select, wallets, publicKey, disconnect } = useWallet();
@@ -16,8 +17,13 @@ export default function WalletButton() {
   return !publicKey ? (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="default" size="sm" className="font-link border-border">
-          Connect wallet
+        <Button className="rounded-lg flex items-center gap-2 bg-foreground/20 backdrop-blur hover:bg-foreground/10 text-foreground">
+          <span>Connect Wallet</span>
+          <ArrowUpRight
+            size={22}
+            className="rounded-full bg-foreground text-background p-1"
+            strokeWidth={1}
+          />
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
