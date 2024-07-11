@@ -3,6 +3,7 @@
 import Hero from "@/components/hero";
 import VideoPreview from "@/components/video-preview";
 import dynamic from "next/dynamic";
+import HeroDemo from "../(demo)/demo/page";
 
 const MobileAppSection = dynamic(() => import("@/components/mobile-app"));
 const Products = dynamic(() => import("@/components/products"));
@@ -14,7 +15,9 @@ const Features = dynamic(() => import("@/components/features"));
 export default function Home() {
   return (
     <div className="">
-      <Hero />
+      <div className="w-full max-w-5xl mx-auto">
+      <HeroDemo />
+      </div>
       <div className="w-full mt-24 lg:mt-0 lg:min-h-screen flex justify-center items-center">
         <VideoPreview />
       </div>
