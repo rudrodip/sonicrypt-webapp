@@ -1,8 +1,7 @@
 import { pgTable, text, integer, timestamp, boolean, primaryKey } from "drizzle-orm/pg-core"
 
 export const User = pgTable("users", {
-  id: text("id").primaryKey().notNull().unique(),
-  email: text("email").notNull().unique(),
+  email: text("email").notNull().primaryKey().unique(),
 });
 
 export const Device = pgTable("devices", {
@@ -13,7 +12,7 @@ export const Device = pgTable("devices", {
   manufactureTime: timestamp("manufacture_time").notNull(),
   verified: boolean("verified").notNull().default(false),
   verificationTime: timestamp("verification_time"),
-  owner: text("owner").references(() => User.id).notNull(),
+  owner: text("owner").references(() => User.email).notNull(),
 });
 
 export const Wallet = pgTable("wallets", {
@@ -23,7 +22,7 @@ export const Wallet = pgTable("wallets", {
 });
 
 export const UserWallet = pgTable("user_wallets", {
-  userId: text("user_id").notNull().references(() => User.id),
+  userId: text("user_id").notNull().references(() => User.email),
   walletId: text("wallet_id").notNull().references(() => Wallet.id),
 }, (table) => {
   return {
