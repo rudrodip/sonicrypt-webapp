@@ -1,4 +1,4 @@
-import Navbar from "./_components/navbar";
+import Navbar from "../(demo)/_components/navbar";
 import Footer from "@/components/footer";
 import BG from "@/components/bg";
 
