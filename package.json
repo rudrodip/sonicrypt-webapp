@@ -12,6 +12,8 @@
     "db:migrate": "bun run src/lib/db/migrate.ts"
   },
   "dependencies": {
+    "@clerk/elements": "^0.10.1",
+    "@clerk/nextjs": "^5.2.2",
     "@google/generative-ai": "^0.14.1",
     "@hookform/resolvers": "^3.3.4",
     "@mdx-js/loader": "^3.0.1",
@@ -76,6 +78,7 @@
     "react-youtube": "^10.1.0",
     "readable-stream": "^4.5.2",
     "sonner": "^1.4.41",
+    "svix": "^1.24.0",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.163.0",
