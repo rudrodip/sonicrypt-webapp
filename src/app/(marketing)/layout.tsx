@@ -1,6 +1,6 @@
-import Navbar from "../(demo)/_components/navbar";
 import Footer from "@/components/footer";
 import BG from "@/components/bg";
+import Navbar from "./_components/navbar";
 
 export default function RootLayout({
   children,

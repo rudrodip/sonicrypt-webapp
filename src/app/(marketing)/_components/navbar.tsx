@@ -17,7 +17,7 @@ import ThemeToggler from "@/components/theme/theme-toggler";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 flex justify-between items-center w-full px-3 sm:px-10 py-2 md:py-2 lg:py-4 z-[5000] bg-secondary/30 backdrop-blur-lg overflow-hidden">
+    <header className="sticky top-3 flex justify-between items-center w-full max-w-5xl mx-auto rounded-2xl px-3 py-2 z-[5000] bg-secondary/30 backdrop-blur-lg overflow-hidden">
       <div className="flex items-center">
         <div className="lg:hidden mr-2 flex items-center">
           <Sheet>
@@ -52,9 +52,6 @@ export default function Navbar() {
           >
             User Guide
           </Link>
-          {/* <Link href="/docs" className={buttonVariants({ variant: "link" })}>
-            Developer Guide
-          </Link> */}
         </div>
       </div>
       <div className="flex items-center gap-5">

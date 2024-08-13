@@ -18,7 +18,7 @@ export default function WalletButton() {
     <Dialog>
       <DialogTrigger asChild>
         <Button className="rounded-lg flex items-center gap-2 bg-foreground/20 backdrop-blur hover:bg-foreground/10 text-foreground">
-          <span>Connect Wallet</span>
+          Connect Wallet
           <ArrowUpRight
             size={22}
             className="rounded-full bg-foreground text-background p-1"
