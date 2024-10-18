@@ -95,12 +95,12 @@
 
 ::-moz-selection {
   color: hsl(var(--secondary));
-  background: hsl(var(--accent));
+  background: hsl(var(--secondary-foreground));
 }
 
 ::selection {
   color: hsl(var(--secondary));
-  background: hsl(var(--accent));
+  background: hsl(var(--secondary-foreground));
 }
 
 .pebble-shadow {
